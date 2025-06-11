@@ -1,1 +1,150 @@
+	
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Q 10</title>
+	<style>
+	
+		input [type=email],[type=date] ,[type=tel],[type=text],[type=number]{
+			height: 30px;
+			width: 280px;
+			font-size: 25px;
+		}input[type=email]
+		{
+			height: 30px;
+			width: 280px;
+			font-size: 25px;
+			
+		}	
+		table{
+			height:600px;
+			width:600px;
+			border-collapse: collapse;
+			font-size: 25px;
+			padding: 20px;
+	margin-left:40px;
+	align-items: center;
+	align-content: center;
+	background-color: aqua;
+	box-shadow: 1px 2px 10px black;
 
+		}input[type=submit],[type=reset]{
+			height: 40px;
+			width: 100px;
+			font-size: 22px;
+			font-family: 'Times New Roman', Times, serif;
+		}input[type=submit]{
+			background-color: rgb(80, 165, 80);
+		}
+		input[type=reset]{
+			background-color: rgb(206, 70, 43);
+		}td{
+			padding-left: 35px;
+		}input[type=number]
+		{
+			appearance:textfield;
+		}
+
+	</style>
+</head>
+<body>
+	<center>
+	<form onsubmit="return result()">	
+	
+	<table border="0">
+		<tr>
+			<td height="10" colspan="2" style="padding-left: 0px; background-color: rgb(158, 202, 38);"><h2 align="center">Regestration Form</h2></td>
+		</tr>
+		<tr>
+			<td>Name:</td>
+			<td><input type="text" name="Name" id="Username"  onchange="return myNamefun()" required ></td>
+		</tr>
+		<tr>
+			<td>DOB:</td>
+			<td><input type="date" name="DOB" required></td>
+		</tr>
+
+		<tr>
+			<td>Age:</td>
+			<td><input type="number" value="Age" maxlength="30" required></td>
+		</tr>
+
+	    <tr>
+		<td>Gender:</td>
+		<td>Male<input type="radio" name="Gender">female<input type="radio" name="Gender" required autofocus></td>
+		</tr>
+	
+		<tr>
+			<td>Mobile No:</td>
+			<td><input type="tel" maxlength="10" name="Mobile"id="Usernum" required autofocus  onchange="return myNum()"></td>
+		</tr>
+		<tr>
+			<td>Email:</td>
+			<td><input type="Email" name="Email" onchange="mymail()" required autofocus></td>
+		</tr>
+        <tr>
+			<td>Aadhar:</td>
+			<td><input type="tel" name="Aadhar" maxlength="12" required autofocus></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center">
+			<input type="submit" name="submit"   >
+			<input type="reset" name="reset" onclick="document.getElementById('result').innerText=''">
+		</td>
+		</tr>
+		<tr><td colspan="2" align="center"><h1 id="result"></h1></td></tr>
+	</table>
+	  
+	
+
+</form>
+<br>
+<br>
+
+</center>
+<script>
+
+
+
+function myNamefun()
+{
+	var myName=document.getElementById("Username").value;
+	if(myName.match(/[0-1]/))
+{
+	alert("Numbers are not allowed to write name")
+}
+
+}
+
+
+function myNum()
+{
+var myNum=document.getElementById("Usernum").value;
+	if(myNum.length<10||myNum.match(/[a-z]/))
+{
+	alert("Enter a valid mobile number")
+}
+}
+
+
+function result()
+{
+	
+	
+  document.getElementById("result").innerText="Your are sucess";
+	return submit;
+
+
+
+
+}
+
+
+localStorage.setItem("Email",myName);
+
+</script>
+	
+</body>
+</html>
