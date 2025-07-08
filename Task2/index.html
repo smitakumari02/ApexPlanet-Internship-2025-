@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>GETINTREN</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="shortcut icon" type="LOGO/png" href="MLogo.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<script>
+function OpenNav() {
+  document.getElementById("Menu").style.display="block";
+}
+
+function closeNav() {
+  document.getElementById("Menu").style.display="none";
+}
+    // Sticky Header 
+    window.addEventListener('scroll', function() {
+      const header = document.getElementById('header');
+      if (window.scrollY >1) {
+        header.classList.add('sticky');
+      } else {
+        header.classList.remove('sticky');
+      }
+    });
+
+
+</script>
+</head>
+<body class="animate__animated  animate__backInDown  animate__repeat 1 1">
+	<header id="header"><div class="LOGO">GETINTERN</div>
+		<nav>
+			<h1 id="Mobile-bar" onclick="OpenNav()">&#9776;</h1> 
+			<a href="Blog.html">Blogs</a>
+			<a href="Contact.html">Contact	</a>
+			<a href="Platform.html">Platforms</a>
+			<a href="About.html">About</a>
+			<a href="index.html">Home</a>
+		</nav>
+
+		<!-- Mobile Menu -->
+		
+
+	</header>
+	<main >
+	<div class="Main-section1">
+		<div class="subsection"><img src="MLogo.png"></div>
+		<div class="subsection1" style="color:black;">
+			<br>
+			<br><!-- Mobile Menu -->
+		    <span id="Menu">
+            <h1 onclick="closeNav()" align="right" style="font-size: 25px;padding:0px  45px; ">&times;</h1>
+			<a href="Blog.html">Blogs</a>
+		    <a href="Contact.html">Contact	</a>
+			<a href="Platform.html">Platforms</a>
+			<a href="About.html">About</a>
+			<a href="">Home</a>
+		    </span>
+
+			Internships are a vital first step toward building your future career. At GETINTERN, we’re here to help you make the most of this important phase of your journey. Whether you're a student looking to gain practical experience or a recent graduate trying to get your foot in the door, we have the right opportunities for you.<br>
+			<h3><u>Our platform provide to wide range of internships  source across a wide range of fields, including but not limited to</u></h3>
+			<ul>
+			<li>Technology: Software development, IT support, UX/UI design, data science, cybersecurity, and more.</li>
+<li>Business & Finance: Marketing, human resources, accounting, sales, consulting, and management.</li>
+<li>Creative Arts: Graphic design, video production, content writing, social media management, and digital marketing.</li>
+<li>Healthcare: Research, public health, administration, and more.</li>
+<li>Engineering: Mechanical, civil, electrical, and aerospace engineering.</li>
+			<a href="Platform.html"><button class="animate__animated  animate__fadeOut animate__infinite	infinite" >Explore Now👉</button></a><hr size="5" color="green"></div>
+	</div>
+
+
+
+
+	<!-- <div class="Main-section2">
+		<div class="subsection"><img src="MLogo.png"></div>
+		<div class="subsection"><h2>Ready to Get Started?</h2>
+Whether you’re a student eager to start your career journey or a company looking to find the perfect intern, GETINTERN is here to make the process and provide  easy, efficient, and rewarding. Create your profile, explore our opportunities, and take the first step toward a brighter future. Let’s shape the future together.
+
+.<br>
+			<h5>Our platform features internships across a wide range of fields, including but not limited to:</h5>
+			<ul>
+			<li>Technology: Software development, IT support, UX/UI design, data science, cybersecurity, and more.</li>
+<li>Business & Finance: Marketing, human resources, accounting, sales, consulting, and management.</li>
+<li>Creative Arts: Graphic design, video production, content writing, social media management, and digital marketing.</li>
+<li>Healthcare: Research, public health, administration, and more.</li>
+<li>Engineering: Mechanical, civil, electrical, and aerospace engineering.</li>
+			<button>EXPLORE NOW</button><button>READ MORE</button></div>
+	</div>
+	 -->
+</main>
+
+</body>
+</html>
