@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Carousel</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eee;
+      padding: 30px;
+      text-align: center;
+    }h1
+    {
+        background-color: black;
+        color: white;
+    }
+    .carousel {
+      position: relative;
+      max-width: 600px;
+      height: 400px;
+      margin: auto;
+      overflow: hidden;
+      border-radius: 10px;
+      background-color: black;
+      padding: 20px;
+    }
+    .carousel img {
+      width: 100%;
+      height: 100%;
+      display: none;
+      transition: opacity 0.5s ease-in-out;
+    }
+    .carousel img.active {
+      display: block;
+    }
+    .buttons {
+      margin-top: 15px;
+    }
+    .buttons button {
+      padding: 10px 20px;
+      margin: 0 10px;
+      background: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+    <h1>
+        🖼️Image Carousel Display
+    </h1>
+  <div class="carousel">
+    <img src="P1.jpg" class="active" />
+    <img src="P2.jpg" />
+    <img src="P3.jpg" />
+    <img src="P4.jpg" />
+    <img src="P5.jpg" />
+  </div>
+  <div class="buttons">
+    <button onclick="prev()">Previous</button>
+    <button onclick="next()">Next</button>
+  </div>
+
+  <script>
+    const images = document.querySelectorAll(".carousel img");
+    let index = 0;
+
+    function showImage(i) {
+      images.forEach((img, idx) => {
+        img.classList.toggle("active", idx === i);
+      });
+    }
+
+    function next() {
+      index = (index + 1) % images.length;
+      showImage(index);
+    }
+
+    function prev() {
+      index = (index - 1 + images.length) % images.length;
+      showImage(index);
+    }
+  </script>
+</body>
+</html>
